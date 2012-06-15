@@ -1,5 +1,5 @@
 (function(){
-  Sammy.Mustache = Mustache;
+
   var config_gist_id = 2936166;
   var posts_per_page = 3;
   //Fork https://gist.github.com/2936166 to use as a template
@@ -20,7 +20,6 @@
           .swap();
     });
   });
-  console.log('Sending Request');
 
   //Fetch the config details from main gist
   var configUrl = 'https://api.github.com/gists/'+config_gist_id;
@@ -28,9 +27,7 @@
 
   //Fetch the config from github and start the app
   $.getJSON(configUrl,function(data){
-    console.log(data.files['config.json'].content);
     var config=JSON.parse(data.files['config.json'].content);
-    console.log(config);
     $('header').html(Mustache.to_html($('header').html(),config));
     app.run('#/');
   })

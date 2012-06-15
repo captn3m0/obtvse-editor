@@ -9,6 +9,8 @@ _Github Based Blogging_
 - Routing is done via sammy.js.
 - You can edit all your blog posts in github itself as well
 - It keeps a special gist with the complete list of files in json format. I had tried to use a single gist with multiple files for the entire blog, but was both heavy (all content gets loadded in a single request) and non-informative (difficult to get last edit date, order of files is ambigous)
+- All authentication is done via Basic Auth, since using oAuth would require a server to hold the client secret. 
+- The user auth details are stored in memory, and only sent to api.github.com for accessing gists.
 
 #Why?
 
