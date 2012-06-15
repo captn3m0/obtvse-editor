@@ -1,0 +1,19 @@
+#obtvse-github
+
+_Github Based Blogging_
+
+#How?
+- It uses the Github API to read/write blog posts. I've used gists, because editing them is far easier than maintaining a repository on github. 
+- It also uses the Github API for logging in the user (for editing posts), and also fetching the actual blog posts from the server. 
+- I've used obtvse-node as a base for the stylesheets and some javascript. 
+- Routing is done via sammy.js.
+- You can edit all your blog posts in github itself as well
+- It keeps a special gist with the complete list of files in json format. I had tried to use a single gist with multiple files for the entire blog, but was both heavy (all content gets loadded in a single request) and non-informative (difficult to get last edit date, order of files is ambigous)
+
+#Why?
+
+Because I can, that's why.
+
+#Licence
+
+Released under [WTFPL](http://sam.zoy.org/wtfpl/)
