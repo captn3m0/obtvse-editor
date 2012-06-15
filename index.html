@@ -9,12 +9,12 @@
 	<body class="index posts">
 		<header>
 			<h1>
-				<a href="/">obtvse-github</a>
+				<a href="{{url}}">{{name}}</a>
 			</h1>
-			<span>its static</span>
+			<span>{{subtext}}</span>
 			<ul>
-				<li><a href="#/twitter">twitter</a></li>
-				<li><a href="#/gplus">g+</a></li>
+				<li><a href="{{twitter}}">twitter</a></li>
+        <li><a href="mailto:{{email}}">email</a></li>
 			</ul>
 			<span class="powered-by">Powered by
 				<a href="http://github.com/">Github</a>
@@ -26,7 +26,8 @@
 			<!--This div is handled by sammy -->
 		</div>
 		<script src="public/javascripts/jquery-1.7.2.js"></script>
-		<script src="public/javascripts/sammy-latest-min.js"></script>
+		<script src="public/javascripts/sammy.min.js"></script>
+		<script src="public/javascripts/mustache.js"></script>
 		<script src="public/javascripts/app.js"></script>
 	</body>
 </html>
