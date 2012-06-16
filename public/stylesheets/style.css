@@ -272,7 +272,7 @@ header li a:hover {
     border-bottom: none
 }
 code {
-    font-size: 13px;background:#F2F2F2;padding:20px;margin:20px;display:block
+    font-size: 13px;background:#F2F2F2;padding:0px 2px 0px 2px;
 }
 .contain,
 #new_post,

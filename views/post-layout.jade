@@ -1,0 +1,24 @@
+!!! 5
+html
+  head
+    title
+      = app.name
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lato:300,900')
+    link(rel='stylesheet', href='public/stylesheets/style.css')
+  body.index.posts
+    header
+      h1
+        a(href='/')
+          = app.name
+      span 
+        != app.subtext
+      ul
+        li
+          a(href='#{app.twitter}', target='_blank') twitter
+        li
+          a(href='mailto:#{app.email}', target='_blank') email
+      span.powered-by Powered by 
+        a(href='http://github.com/', target='_blank') Github
+        &nbsp;·
+        a(href='#/admin') Admin
+    != body

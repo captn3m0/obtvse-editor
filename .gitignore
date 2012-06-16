@@ -1,3 +1,4 @@
 public/javascripts/build.js
 public/javascripts/app.min.js
 views/build/
+mock/

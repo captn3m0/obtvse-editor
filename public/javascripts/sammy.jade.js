@@ -19,9 +19,6 @@
       data     = $.extend({}, this, data);
       partials = $.extend({}, data.partials, partials);
       var compiledTemplate = jade.compile(template);
-      jade.render(template,data,function(err,str){
-          return str;
-      })
       return compiledTemplate(data);
     };
     

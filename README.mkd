@@ -13,9 +13,8 @@ _Github Based Blogging_
 - The user auth details are stored in memory, and only sent to api.github.com for accessing gists.
 
 #Todo Stuff
-- Port the jade template to sammy
-- Switch to backbone, sammy is slowing me down
-- Remove mustache, shift even that to jade. Keep the <header> blank, possibly
+- ~~Port the jade template to sammy~~
+- ~~Remove mustache, shift even that to jade. Keep the <header> blank, possibly~~
 - at least get the admin login to work
 - Prepare corresponding routes from the ruby app
 
