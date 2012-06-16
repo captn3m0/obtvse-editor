@@ -1,34 +1,39 @@
 (function(){
-
+  /**
+   * Configuration Stuff 
+   */
   var config_gist_id = 2936166;
-  var posts_per_page = 3;
   //Fork https://gist.github.com/2936166 to use as a template
-  // initialize the application
-  var app = Sammy('#container', function() {
-    // include a plugin
-    this.use('Mustache');
-
-    // define a 'route'
-    this.get('#/', function() {
-      //We'll call the same function thrice
-      //and add the post each time.
-      // load some data
-      this.load('posts.json')
-          // render a template
-          .renderEach('post.mustache')
-          // swap the DOM with the new content
-          .swap();
-    });
-  });
-
-  //Fetch the config details from main gist
+  var posts_per_page = 3;
   var configUrl = 'https://api.github.com/gists/'+config_gist_id;
   var configUrl = 'gist.json';//development purposes
-
-  //Fetch the config from github and start the app
-  $.getJSON(configUrl,function(data){
-    var config=JSON.parse(data.files['config.json'].content);
-    $('header').html(Mustache.to_html($('header').html(),config));
-    app.run('#/');
-  })
-})()
+  
+  // initialize the application
+  var app = Sammy('#container', function() {
+    // include plugins
+    this.use('Jade');
+    this.use('Store');
+    var store=new Sammy.Store();
+    
+    this.get('#/admin/',function(){
+      //if no user login details are present in the store
+      if(!store.exists('username')){
+        //render the login page here
+      }
+    });
+  });
+  $.get(configUrl,function(config){
+    //we fetch the configuration and store it
+    app.config = JSON.parse(config.files['config.json'].content);
+    $.get('views/header.jade',function(template){
+      $.header.html(
+        jade.render(template,app.config,function(err,str){
+          if(err) throw err;
+          $('header').html(str);
+        })
+      );
+    });
+  });
+  //Start the app
+  app.run('#/');
+})();

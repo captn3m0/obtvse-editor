@@ -1,84 +1,4 @@
 {
-  "history": [
-    {
-      "url": "https://api.github.com/gists/2936166/45661041ff347b895f93e010a9d360f212a7a58a",
-      "user": {
-        "url": "https://api.github.com/users/captn3m0",
-        "avatar_url": "https://secure.gravatar.com/avatar/90871c43d335468e83876ac0d0a9b40c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png",
-        "login": "captn3m0",
-        "id": 584253,
-        "gravatar_id": "90871c43d335468e83876ac0d0a9b40c"
-      },
-      "change_status": {
-        "deletions": 10,
-        "additions": 10,
-        "total": 20
-      },
-      "committed_at": "2012-06-15T13:22:43Z",
-      "version": "45661041ff347b895f93e010a9d360f212a7a58a"
-    },
-    {
-      "url": "https://api.github.com/gists/2936166/f549506f29f912a312ed72056ee09701ac659d83",
-      "user": {
-        "url": "https://api.github.com/users/captn3m0",
-        "avatar_url": "https://secure.gravatar.com/avatar/90871c43d335468e83876ac0d0a9b40c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png",
-        "login": "captn3m0",
-        "id": 584253,
-        "gravatar_id": "90871c43d335468e83876ac0d0a9b40c"
-      },
-      "change_status": {
-        "deletions": 3,
-        "additions": 9,
-        "total": 12
-      },
-      "committed_at": "2012-06-15T13:15:46Z",
-      "version": "f549506f29f912a312ed72056ee09701ac659d83"
-    },
-    {
-      "url": "https://api.github.com/gists/2936166/b67cb6b22053464eba79eac9681faabd635848ca",
-      "user": {
-        "url": "https://api.github.com/users/captn3m0",
-        "avatar_url": "https://secure.gravatar.com/avatar/90871c43d335468e83876ac0d0a9b40c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png",
-        "login": "captn3m0",
-        "id": 584253,
-        "gravatar_id": "90871c43d335468e83876ac0d0a9b40c"
-      },
-      "change_status": {
-        "deletions": 0,
-        "additions": 1,
-        "total": 1
-      },
-      "committed_at": "2012-06-15T13:05:27Z",
-      "version": "b67cb6b22053464eba79eac9681faabd635848ca"
-    },
-    {
-      "url": "https://api.github.com/gists/2936166/1d44a7531154952b0f0ae6fb5610fcbb0e086413",
-      "user": {
-        "url": "https://api.github.com/users/captn3m0",
-        "avatar_url": "https://secure.gravatar.com/avatar/90871c43d335468e83876ac0d0a9b40c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png",
-        "login": "captn3m0",
-        "id": 584253,
-        "gravatar_id": "90871c43d335468e83876ac0d0a9b40c"
-      },
-      "change_status": {
-        "deletions": 0,
-        "additions": 10,
-        "total": 10
-      },
-      "committed_at": "2012-06-15T12:10:15Z",
-      "version": "1d44a7531154952b0f0ae6fb5610fcbb0e086413"
-    }
-  ],
-  "git_push_url": "git@gist.github.com:2936166.git",
-  "url": "https://api.github.com/gists/2936166",
-  "user": {
-    "url": "https://api.github.com/users/captn3m0",
-    "avatar_url": "https://secure.gravatar.com/avatar/90871c43d335468e83876ac0d0a9b40c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png",
-    "login": "captn3m0",
-    "id": 584253,
-    "gravatar_id": "90871c43d335468e83876ac0d0a9b40c"
-  },
-  "public": true,
   "files": {
     "config.json": {
       "type": "application/json",
@@ -88,15 +8,5 @@
       "filename": "config.json",
       "raw_url": "https://gist.github.com/raw/2936166/f7e7a9528069337ae43b7c4a9e114e9950275d64/config.json"
     }
-  },
-  "description": "",
-  "comments": 0,
-  "created_at": "2012-06-15T12:10:15Z",
-  "html_url": "https://gist.github.com/2936166",
-  "forks": [
-
-  ],
-  "updated_at": "2012-06-15T12:10:15Z",
-  "git_pull_url": "git://gist.github.com/2936166.git",
-  "id": "2936166"
+  }
 }

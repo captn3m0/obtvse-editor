@@ -19,13 +19,11 @@ _Github Based Blogging_
 - Prepare corresponding routes from the ruby app
 
 #Develoment
-- The only dependency for development is grunt-jade.
-- You'd need grunt installed globally as well
+- The only dependency for development is grunt
 - `npm install grunt -g`
-- `npm install grunt-jade`
 - I'm sticking to jade to maintain some compatibility from the original obtvse, so patches can be easily merged.
 - `grunt watch` should help out in development
-- Do a `grunt production` to minify
+- Do a `grunt production` to minify (remember to replace build.js with app.min.js)
 
 #Why?
 
@@ -33,4 +31,5 @@ Because I can, that's why.
 
 #Licence
 
-Released under [WTFPL](http://sam.zoy.org/wtfpl/)
+- Released under MIT Licence.
+- Stylesheets/Layouts re-used from [obtvse-node](https://github.com/gorekee/obtvse-node.js) under MIT.

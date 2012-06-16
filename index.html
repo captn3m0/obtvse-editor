@@ -1,31 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-us">
-	<head>
-		<title>obtvse-static-blog</title>
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,900">
-		<link rel="stylesheet" href="public/stylesheets/style.css">
-	</head>
-	<body class="index posts">
-		<header>
-			<h1>
-				<a href="{{url}}">{{name}}</a>
-			</h1>
-			<span>{{subtext}}</span>
-			<ul>
-				<li><a href="{{twitter}}">twitter</a></li>
-        <li><a href="mailto:{{email}}">email</a></li>
-			</ul>
-			<span class="powered-by">Powered by
-				<a href="http://github.com/">Github</a>
-				&nbsp;·
-				<a href="#/admin">Admin</a>
-			</span>
-		</header>
-		<div id="container">
-			<!--This div is handled by sammy -->
-		</div>
-		<script src="public/javascripts/jquery-1.7.2.js"></script>
-		<script src="public/javascripts/sammy.min.js"></script>
+  <head>
+    <title>obtvse-static-blog</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,900">
+    <link rel="stylesheet" href="public/stylesheets/style.css">
+  </head>
+  <body class="index posts">
+    <header>
+      <!--This is rendered after the first request to the github api -->
+    </header>
+    <div id="container">
+      <!--This div is handled by sammy -->
+    </div>
+    <script src="public/javascripts/jquery-1.7.2.js"></script>
+    <script src="public/javascripts/sammy.min.js"></script>
     <!--
     If you do not want to run grunt, you can include all 
     the files mentioned in grunt.js sequentially 
@@ -33,6 +21,6 @@
     instead of build.js. For release, replace build.js
     with app.min.js (minified) after running `grunt production`
     -->
-		<script src="public/javascripts/build.js"></script>
-	</body>
+    <script src="public/javascripts/build.js"></script>
+  </body>
 </html>

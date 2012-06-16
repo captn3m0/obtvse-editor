@@ -1,41 +1,28 @@
 module.exports = function(grunt) {
-  grunt.loadNpmTasks('grunt-jade');
   grunt.initConfig({
     concat: {
       dev: {
         src: [
-          'public/javascripts/jade.min.js',
-		      'public/javascripts/mustache.min.js',
-          'public/javascripts/sammy.mustache.js',
-          'public/javascripts/showdown.js',
-          'public/javascripts/app.js'
-		    ],
-          dest: 'public/javascripts/build.js'
-        }
-    },
-    min:{
-	    js:{
-	      src:['public/javascripts/build.js'],
-	      dest:'public/javascripts/app.min.js',
-        separator: ';'
-	    }
-	  },
-    jade:{
-      dev:{
-        src:['views/*.jade'],
-        dest:'views/build/',
-        options: {
-          compileDebug: false
-        },
-        wrapper: {
-          amd: true
-        }
+          'public/javascripts/sammy.storage.js',//Sammy.Storage plugin
+          'public/javascripts/jade.min.js',//Jade minified lib
+          'public/javascripts/sammy.jade.js',//Sammy.Jade plugin (needs jade)
+          'public/javascripts/showdown.js',//This is Github Flavored Markdown
+          'public/javascripts/app.js'//Main core application
+        ],
+        dest: 'public/javascripts/build.js'
       }
     },
-	  watch:{
-	    files:['<config:concat.dev.src>','<config:jade.dev.src>'],
-  	  tasks:'concat jade'
-	  }
+    min:{
+      js:{
+        src:'public/javascripts/build.js',
+        dest:'public/javascripts/app.min.js',
+        separator: ';'
+      }
+    },
+    watch:{
+      files:'<config:concat.dev.src>',
+      tasks:'concat'
+    }
   });
   grunt.registerTask('default', 'watch');
   grunt.registerTask('production', 'concat min');
