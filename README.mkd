@@ -12,6 +12,21 @@ _Github Based Blogging_
 - All authentication is done via Basic Auth, since using oAuth would require a server to hold the client secret. 
 - The user auth details are stored in memory, and only sent to api.github.com for accessing gists.
 
+#Todo Stuff
+- Port the jade template to sammy
+- Remove mustache, shift even that to jade. Keep the <header> blank, possibly
+- at least get the admin login to work
+- Prepare corresponding routes from the ruby app
+
+#Develoment
+- The only dependency for development is grunt-jade.
+- You'd need grunt installed globally as well
+- `npm install grunt -g`
+- `npm install grunt-jade`
+- I'm sticking to jade to maintain some compatibility from the original obtvse, so patches can be easily merged.
+- `grunt watch` should help out in development
+- Do a `grunt production` to minify
+
 #Why?
 
 Because I can, that's why.
