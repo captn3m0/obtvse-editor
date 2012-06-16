@@ -9,31 +9,32 @@
   var configUrl = 'gist.json';//development purposes
   
   // initialize the application
-  var app = Sammy('#container', function() {
+  var app = Sammy('html', function() {
     // include plugins
     this.use('Jade');
     this.use('Store');
     var store=new Sammy.Store();
     
-    this.get('#/admin/',function(){
+    this.get('#/admin/login',function(){
       //if no user login details are present in the store
       if(!store.exists('username')){
         //render the login page here
+        this.render('views/admin-layout.jade',{body:this.render('views/admin-login.jade')}).swap();
       }
     });
   });
-  $.get(configUrl,function(config){
-    //we fetch the configuration and store it
+  
+  var configRequest = $.get(configUrl)
+  .pipe(function(config){
     app.config = JSON.parse(config.files['config.json'].content);
-    $.get('views/header.jade',function(template){
-      $.header.html(
-        jade.render(template,app.config,function(err,str){
-          if(err) throw err;
-          $('header').html(str);
-        })
-      );
-    });
-  });
+    return $.get('views/header.jade',app.config);
+  })
+  .pipe(function(template){
+    jade.render(template,app.config,function(err,str){
+      $('header').html(str);
+    })
+  })
+  
   //Start the app
   app.run('#/');
 })();

@@ -14,6 +14,7 @@ _Github Based Blogging_
 
 #Todo Stuff
 - Port the jade template to sammy
+- Switch to backbone, sammy is slowing me down
 - Remove mustache, shift even that to jade. Keep the <header> blank, possibly
 - at least get the admin login to work
 - Prepare corresponding routes from the ruby app

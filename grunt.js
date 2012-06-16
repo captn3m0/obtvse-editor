@@ -4,7 +4,7 @@ module.exports = function(grunt) {
       dev: {
         src: [
           'public/javascripts/sammy.storage.js',//Sammy.Storage plugin
-          'public/javascripts/jade.min.js',//Jade minified lib
+          'public/javascripts/jade.js',//Jade minified lib
           'public/javascripts/sammy.jade.js',//Sammy.Jade plugin (needs jade)
           'public/javascripts/showdown.js',//This is Github Flavored Markdown
           'public/javascripts/app.js'//Main core application

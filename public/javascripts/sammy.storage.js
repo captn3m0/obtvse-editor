@@ -27,6 +27,9 @@
     },
     clear: function(key) {
       window.sessionStorage.removeItem(this.key(key));;
+    },
+    key:function(k){
+      return k;
     }
   });
 })(jQuery);

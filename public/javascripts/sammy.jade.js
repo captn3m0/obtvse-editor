@@ -19,12 +19,14 @@
       data     = $.extend({}, this, data);
       partials = $.extend({}, data.partials, partials);
       var compiledTemplate = jade.compile(template);
+      jade.render(template,data,function(err,str){
+          return str;
+      })
       return compiledTemplate(data);
     };
     
     //Sammy.Jade plugin aliasing
     method_alias=method_alias||'jade';
-    if(app)  app.helper(method_alias, jadeRender);
-    return jadeRender;
+    app.helper(method_alias, jadeRender);
   };
 })(jQuery);
