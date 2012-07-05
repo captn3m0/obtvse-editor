@@ -1,0 +1,30 @@
+- if(typeof error !== 'undefined')
+  p 
+    b ERROR!
+    = error
+form.new_post#new_post(action='#/login', method='post', name='login', accept-charset='UTF-8')
+  div.contain
+    div#text-title.active.expandingArea
+      pre
+        span
+        br
+        br
+      input#username.center(tabindex=1, placeholder='github username')
+    fieldset.markdown
+      div#text-content.expandingArea.active
+        pre
+          span
+          br
+        input#password.center(tabindex=2, type='password', placeholder='Write your password here')
+      div#repoDetails
+        input#repository(tabindex=3,size=52,placeholder="Repository Name", value="captn3m0.github.com")
+        input#branch.right(tabindex=4,size=8,value="master",placeholder="Branch",title="Enter branch name")
+
+  p
+    b Note 
+    p Please enter your github credentials here. These are only passed to api.github.com only.The auth details are stored nowhere and sent over https+digest md5.
+    p  You can leave both username and password blank for a read-only demo.
+  div#publish-bar
+    div.contain
+      div.right
+        input#save-button(tabindex=5, type='submit', value='Login')

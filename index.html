@@ -1,29 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <title>obtvse-static-blog</title>
+    <title>obtvse-jekyll-editor</title>
     <!-- You can add your own meta tags for authorship and open-graph here-->
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,900">
     <link rel="stylesheet" href="public/stylesheets/style.css">
-    <script src="public/javascripts/jquery-1.7.2.js"></script>
-    <script src="public/javascripts/sammy.js"></script>
-    <!--
-    If you do not want to run grunt, you can include all 
-    the files mentioned in grunt.js sequentially 
-    (from the concat:dev task)
-    instead of build.js. For release, replace build.js
-    with app.min.js (minified) after running `grunt production`
-    -->
-    <script src="public/javascripts/build.js"></script>
+    <script data-main="app/main" src="app/libs/require/require.js"></script>
   </head>
-  <body>
-      <noscript>
-          This blog is powered by obtvse-github, a static blog project
-          that uses github gists as its backend. To read the blog posts, 
-          you must enable Javascript.
-      </noscript>
-      Please wait... 
-      <br>
-      Loading content...
+  <body class="admin">
+    <div id="admin">
+    </div>
   </body>
 </html>

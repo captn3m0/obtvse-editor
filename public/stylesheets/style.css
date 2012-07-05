@@ -453,3 +453,10 @@ label {
 nav.pagination {
   text-align: right; font-size: 16px; font-weight: 900; text-transform: uppercase; margin: 0; padding: 0;
 }
+.center{
+  text-align:center;
+}
+
+#repoDetails #repository{
+    margin:0px 10px 0px 0px;
+}

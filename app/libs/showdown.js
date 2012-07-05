@@ -77,6 +77,7 @@
 //
 // Showdown namespace
 //
+define([],function() {
 var Showdown = {};
 
 //
@@ -1389,3 +1390,5 @@ var escapeCharacters_callback = function(wholeMatch,m1) {
 }
 
 }; // end of Showdown.converter
+return Showdown;
+});
