@@ -9,13 +9,17 @@ form.new_post#new_post(action='#/admin/login', method='post', name='login', acce
         span
         br
         br
-      input(tabindex=1, name='username', placeholder='Your username', style='text-align: center')
+      input(tabindex=1, name='username', placeholder='github username', style='text-align: center', value='#{username}')
     fieldset.markdown
       div#text-content.expandingArea.active
         pre
           span
           br
         input(tabindex=2, name='password', type='password', placeholder='Write your password here', style='text-align: center')
+  p
+    b  Note 
+    p  Please enter your github credentials here. These credentials are stored in your current session (window.sessionStore). These are only passed to `api.github.com` only (over HTTPS).
+    p  You can enter incorrect details to take a demo of the backend.
   div#publish-bar
     div.contain
       div.right

@@ -14,9 +14,11 @@ html
         != app.subtext
       ul
         li
-          a(href='#{app.twitter}', target='_blank') twitter
+          a(href='#{app.twitter}', target='_blank') @#{app.twitter}
         li
-          a(href='mailto:#{app.email}', target='_blank') email
+          a(href='mailto:#{app.email}', target='_blank') say hello
+        li
+          a(href="https://github.com/#{app.github}", target='_blank) github
       span.powered-by Powered by 
         a(href='http://github.com/', target='_blank') Github
         &nbsp;·

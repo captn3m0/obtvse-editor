@@ -28,13 +28,12 @@
       var renderPosts = function(){
         if(renderedPosts.length != postsToShow.length)
           return false;
-        console.log('here');
         //Now everything is rendered
         //We need to just join them together and render
-        context.render('views/post-index.jade',{posts:renderedPosts,isAuth:store.exists('username'),date:renderedPosts[0].created,paging:{l:false,r:true},page:{prev:0,next:1}})
+        var isAuth = store.exists('username');
+        context.render('views/post-index.jade',{posts:renderedPosts,isAuth:isAuth,time:renderedPosts[0].time,paging:{l:false,r:true},page:{prev:0,next:1}})
         .then(function(content){
           var data = {app:app.config,body:content};
-          console.log(data);
           context.render('views/post-layout.jade',data).swap();
         });
       }
@@ -54,11 +53,11 @@
                   break;
             }
             var post = postsToShow[id];
-            post.created=file.updated_at;
-            post.time=file.updated_at;
+            var months = ['January','Februrary','March','April','May','June',"July","August","September","October","November","December"]
+            var date = new Date(Date.parse(json.updated_at));
+            post.time=months[date.getMonth()]+' '+date.getDate()+', '+date.getFullYear();
             post.title_html = mkd.makeHtml(post.title);
             post.content_html = mkd.makeHtml(file.content);
-            
             renderedPosts[id] = post;
             renderPosts();//try to renderPosts
           })
@@ -66,17 +65,34 @@
       }
     });
     
+    this.get('#/admin/',function(){
+      if(!store.exists('username'))
+        this.redirect('#/admin/login');
+      //We are at the main admin place.
+      var drafts = app.config.posts.filter(function(p){return p.hasOwnProperty('draft');});
+      var published = app.config.posts.filter(function(p){return !p.hasOwnProperty('draft');});
+      this.render('views/admin-backend.jade',{drafts:false,publish:published})
+      .then(function(content){
+        this.render('views/admin-layout.jade',{data:content}).swap()
+      })
+    })
+    
     this.get('#/admin/login',function(){
       //if no user login details are present in the store
       if(!store.exists('username')){
         //render the login page here
-        this.render('views/admin-login.jade')
+        this.render('views/admin-login.jade',{username:app.config.github})
         .then(function(content){
           this.render('views/admin-layout.jade',{data:content})
           .then(function(c){
           })
           .swap();
-        })        
+        })
+      }
+      else{
+        //we are already logged in
+        //send to /admin
+        this.redirect('#/admin/');
       }
     });
     
@@ -84,7 +100,6 @@
       //some details were posted
       store.set("username",this.params['username']);
       store.set("password",this.params['password']);
-      
     });
   });
   
@@ -93,6 +108,7 @@
    */
   var configRequest = $.get(configUrl,function(config){
     app.config = JSON.parse(config.files['config.json'].content);
+    app.config.github = config.user.login;
     app.run('#/');//run the app
   });
   
@@ -108,6 +124,5 @@
         jqXHR.abort();
     }
   });
-  //Start the app
   
 })();

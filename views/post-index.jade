@@ -1,4 +1,6 @@
 div#container
+  time
+    != time
   div#content
     - if ( !posts || !posts.length)
       section 
@@ -9,7 +11,7 @@ div#container
         section
           div.post.contain
             h1.aside
-              a(href='#/post/single/' + post.id)
+              a(href='#/post/' + post.id + '/')
                 != post.title_html
             != post.content_html
             - if(isAuth)
