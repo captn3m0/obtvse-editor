@@ -10,7 +10,9 @@ require.config({
     showdown:'libs/showdown',
     storage:'storage',
     github:'libs/github',
-    jade:'libs/jade'
+    jade:'libs/jade',
+    underscore:'libs/underscore',
+    base64:'libs/base64'
   }
 });
 

@@ -4,7 +4,7 @@
 // For all details and documentation:
 // http://substance.io/michael/github
 
-define(['jquery'],function($) {
+define(['jquery','underscore','base64'],function($,_,Base64) {
   var API_URL = 'https://api.github.com';
 
   var Github = function(options) {
@@ -14,6 +14,7 @@ define(['jquery'],function($) {
 
     function headers() {
       var headers = {}
+      if (options.auth===false) return { Accept: 'application/vnd.github.raw' };
       if (options.auth === 'oauth' && !options.token) return { Accept: 'application/vnd.github.raw' };
       if (options.auth === 'basic' && (!options.username || !options.password)) return { Accept: 'application/vnd.github.raw' };
       return options.auth == 'oauth'

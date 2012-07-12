@@ -70,15 +70,6 @@ $(function () {
         // Set minimum height of content textarea
         $('#post_content').css('min-height', $(window).height() - $('#post_title').height() - 130);
 
-        // Autosave
-        // setInterval(function(){
-        //   var form = $('.edit_post'),
-        //       action = form.attr('action');
-        //   $.post(action, form.serialize(), function(data){
-        //   	$('body').prepend('<span>Saved!</span>');
-        //   });
-        // },10000);
-        // Preview pops open new window
         var form = document.getElementsByTagName('form')[0];
         // document.getElementById('preview-button').onclick = function () {
         //     form.target = '_blank';
