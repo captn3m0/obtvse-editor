@@ -3,7 +3,7 @@
 // Base64 code from Tyler Akins -- http://rumkin.com
 // Ported for requirejs by Abhay Rana -- http://captnemo.in
 
-define(,function(){
+define(function(){
     var Base64 = (function () {
         var keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
 

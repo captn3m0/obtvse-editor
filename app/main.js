@@ -12,7 +12,8 @@ require.config({
     github:'libs/github',
     jade:'libs/jade',
     underscore:'libs/underscore',
-    base64:'libs/base64'
+    base64:'libs/base64',
+    yaml:'libs/yaml2'
   }
 });
 

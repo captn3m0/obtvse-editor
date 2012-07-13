@@ -8,12 +8,10 @@ div#drafts.col
       - each draft in drafts
         li
           h3
-            a(href='#/edit/' + draft.sha)
+            a(href='#/edit/' + draft.sha + '/_drafts/' + draft.path)
               != draft.path
           span.links
-            a.admin-view(href='#/edit/' + draft.sha + '/preview') view
-            a.admin-view(href='#/edit/' + draft.sha) edit
-            a.admin-delete(rel='nofollow', href='#/remove/' + draft.sha) x
+            a.admin-delete(rel='nofollow', href='#/remove/' + draft.path) x
 div#published.col
   h2 Published
   ul
@@ -21,9 +19,7 @@ div#published.col
       - each post in publish
         li
           h3
-            a(href='#/edit/' + post.sha)
+            a(href='#/edit/' + post.sha + '/_posts/' + post.path)
               != post.path
           span.links
-            a.admin-view(href='#/edit/' + post.sha + '/preview') view
-            a.admin-view(href='#/edit/' + post.sha) edit
-            a.admin-delete(rel='nofollow', href='#/remove/' + post.sha) x
+            a.admin-delete(rel='nofollow', href='#/remove/' + post.path) x

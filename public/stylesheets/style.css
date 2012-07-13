@@ -277,7 +277,7 @@ code {
 .contain,
 #new_post,
 .edit_post {
-    width: 580px
+    width: 700px
 }
 .contain img {
     max-width: 100%;height:auto
@@ -436,7 +436,7 @@ label {
 }
 #admin .expandingArea.active>input,
 #admin .expandingArea.active>textarea {
-    overflow: hidden;position:absolute;top:0;left:0;height:100%;resize:none
+    position:absolute;top:0;left:0;height:100%;resize:none
 }
 #admin .expandingArea.active>input {
   height:63px;
