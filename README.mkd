@@ -3,28 +3,21 @@
 _Github Based Blogging_
 
 #How?
-- It uses the Github API to read/write blog posts. I've used gists, because editing them is far easier than maintaining a repository on github. 
-- It also uses the Github API for logging in the user (for editing posts), and also fetching the actual blog posts from the server. 
+
 - I've used obtvse-node as a base for the stylesheets and some javascript. 
-- Routing is done via sammy.js.
+- Routing is done via simrou
 - You can edit all your blog posts in github itself as well
-- It keeps a special gist with the complete list of files in json format. I had tried to use a single gist with multiple files for the entire blog, but was both heavy (all content gets loadded in a single request) and non-informative (difficult to get last edit date, order of files is ambigous)
-- All authentication is done via Basic Auth, since using oAuth would require a server to hold the client secret. 
-- The user auth details are stored in memory, and only sent to api.github.com for accessing gists over https
+- All authentication is done via Basic Auth, since using oAuth would require a server to hold the client secret.
+- The user auth details are stored in memory, and only sent to api.github.com for accessing gists over https.
+- Since github only allows CORS requests over oauth app domains, it needs some setup steps.
 
 #Todo Stuff
-- ~~Port the jade template to sammy~~
-- ~~Remove mustache, shift even that to jade. Keep the <header> blank, possibly~~
-- at least get the admin login to work
-- Prepare corresponding routes from the ruby app
-- Create better models for Posts etc
+- Work on editing posts
+- Live YAML differences
+- Ask people about preference for _drafts vs published: true
 
 #Develoment
-- The only dependency for development is grunt
-- `npm install grunt -g`
 - I'm sticking to jade to maintain some compatibility from the original obtvse, so patches can be easily merged.
-- `grunt watch` should help out in development
-- Do a `grunt production` to minify (remember to replace build.js with app.min.js)
 
 #Why?
 
