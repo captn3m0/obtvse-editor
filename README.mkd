@@ -2,28 +2,4 @@
 
 _Github Based Blogging_
 
-#How?
-
-- I've used obtvse-node as a base for the stylesheets and some javascript. 
-- Routing is done via simrou
-- You can edit all your blog posts in github itself as well
-- All authentication is done via Basic Auth, since using oAuth would require a server to hold the client secret.
-- The user auth details are stored in memory, and only sent to api.github.com for accessing gists over https.
-- Since github only allows CORS requests over oauth app domains, it needs some setup steps.
-
-#Todo Stuff
-- Work on editing posts
-- Live YAML differences
-- Ask people about preference for _drafts vs published: true
-
-#Develoment
-- I'm sticking to jade to maintain some compatibility from the original obtvse, so patches can be easily merged.
-
-#Why?
-
-Because I can, that's why. And I like to try out new stuff in javascript.
-
-#Licence
-
-- Released under MIT Licence.
-- Stylesheets/Layouts re-used from [obtvse-node](https://github.com/gorekee/obtvse-node.js) under MIT.
+This repository is now deprecated in favour of http://github.com/captn3m0/potion. Follow that for more updates.
